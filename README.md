@@ -18,7 +18,7 @@ installed and logged into Docker Hub. The steps are as follows.
 2. Open another shell window of your host OS, and in it, check the
    name of the container given by docker:
    ```
-   docker ps | grep buildozer   
+   docker ps
    ```
    This command will show something like the following, and we will
    use the name `friendly_shtern` as an example (the name shown may be

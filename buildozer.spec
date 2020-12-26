@@ -1,8 +1,8 @@
 [app]
 
-title = Kivy Basics
+title = Kivy Paint
 
-package.name = basics
+package.name = paint
 
 package.domain = org.kivy
 
@@ -10,7 +10,7 @@ source.dir = .
 
 source.include_exts = py
 
-version = 0.0.1
+version = 2.0.0
 
 requirements = kivy
 

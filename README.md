@@ -1,9 +1,10 @@
 # kivy-basics
 
-Deployment instruction of a simple Kivy app from the [Kivy programming
-guide](https://kivy.org/doc/stable/guide/basic.html).
+Deployment instruction of a simple paint app from the
+[Kivy tutorials](https://kivy.org/doc/stable/tutorials/firstwidget.html).
 
-This project is in the public domain.
+Except `main.py`, the rest of the project is in the public domain. Please
+refer to the header comment of `main.py` for its license information.
 
 The instruction is intended for when you are using Windows or OS X and
 want to deploy the application using buildozer, but you do not want to
@@ -33,15 +34,8 @@ installed and logged into Docker Hub. The steps are as follows.
    docker cp main.py friendly_shtern:/home/user/hostcwd/
    docker cp buildozer.spec friendly_shtern:/home/user/hostcwd/
    ```
-   `main.py` is the simple "Hello world" example from the [Kivy
-   programming guide](https://kivy.org/doc/stable/guide/basic.html),
-   but we removed the lines:
-   ```
-   import kivy
-   kivy.require('1.0.6')
-   ```
-   This is to avoid conflict with the version of Kivy used by
-   buildozer.
+   `main.py` is the simple paint app from the [Kivy
+   tutorials](https://kivy.org/doc/stable/tutorials/firstwidget.html).
 
    The reason why we use copying instead of mounting a source
    directory using the `-v` option of `docker run` is because with
@@ -61,12 +55,12 @@ installed and logged into Docker Hub. The steps are as follows.
    ```
    When asked to accept Android SDK license, input `y`. This step
    should produce an apk file named
-   `basics-0.0.1-armeabi-v7a-debug.apk` in the `bin/` subdirectory in
+   `paint-2.0.0-armeabi-v7a-debug.apk` in the `bin/` subdirectory in
    the container.
 
 6. Copy the apk file to your host OS:
    ```
-   docker cp friendly_shtern:/home/user/hostcwd/bin/basics-0.0.1-armeabi-v7a-debug.apk .
+   docker cp friendly_shtern:/home/user/hostcwd/bin/paint-2.0.0-armeabi-v7a-debug.apk .
    ```
 
 7. Upload the apk file from your host OS to Google drive, and then in
